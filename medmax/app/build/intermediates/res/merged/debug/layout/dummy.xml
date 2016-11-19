@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/chkbtn"
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:layout_centerHorizontal="true"
+
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:text="CHECK PROFILE"
+
+    android:textSize="30dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkinventory"
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:layout_centerHorizontal="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="CHECK INVENTORY"
+        android:layout_below="@+id/chkbtn"
+
+        android:textSize="30dp"/>
+
+</RelativeLayout>

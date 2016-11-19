@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    tools:context=".MainFragment">
+
+    <LinearLayout android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="80dip"
+        android:background="@layout/footer_repeat"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <TextView
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inventory"
+        android:id="@+id/inventory"
+        android:textSize="30sp"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true" />
+    <ListView
+        android:typeface="monospace"
+        android:layout_width="match_parent"
+        android:layout_height="200pt"
+        android:layout_weight="1"
+        android:id="@+id/itemList"
+        android:layout_below="@+id/inventory"
+        android:divider="#4D4E4E"
+        android:dividerHeight="1dp">
+    </ListView>
+    <Button
+        android:typeface="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/add"
+        android:layout_below="@+id/itemList"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

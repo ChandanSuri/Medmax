@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:deepak="http://schemas.android.com/apk/res/android"
+    deepak:layout_width="match_parent"
+    deepak:layout_height="match_parent"
+    deepak:background="#ffffff"
+    deepak:id="@+id/mainlay">
+    <RelativeLayout
+        deepak:layout_width="match_parent"
+        deepak:layout_height="wrap_content"
+        deepak:id="@+id/lay1">
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/a1"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@layout/header_gradient"
+                app:popupTheme="@style/AppTheme.PopupOverlay" >
+                <RelativeLayout android:id="@+id/header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@layout/header_gradient">
+                    <!-- Logo Start-->
+                    <ImageView
+                        deepak:layout_width="wrap_content"
+                        deepak:layout_height="wrap_content"
+                        deepak:src="@drawable/ic_menu_manage"
+                        deepak:id="@+id/img"
+                        deepak:layout_marginTop="12dp"
+                        deepak:layout_marginBottom="2dp"
+                        />
+                    <ImageView android:src="@drawable/logo"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29dip"
+                        android:id="@+id/homes"/>
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/images1"/>
+                    <!-- Logo Ends -->
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+    </RelativeLayout>
+    <!-- header ends here-->
+    <!-- navigation starts here-->
+    <android.support.v4.widget.DrawerLayout
+        deepak:layout_width="match_parent"
+        deepak:layout_height="fill_parent"
+        deepak:layout_below="@+id/lay1"
+        deepak:id="@+id/drawf">
+        <FrameLayout
+            deepak:layout_width="match_parent"
+            deepak:layout_height="match_parent"
+            deepak:id="@+id/frame">
+        </FrameLayout>
+
+        <ListView
+            style="@style/CodeFont"
+            deepak:layout_width="250dp"
+            deepak:layout_height="match_parent"
+            deepak:layout_gravity="start"
+            deepak:divider="#000"
+            deepak:id="@+id/nav_list"
+            deepak:dividerHeight="2dp"
+            deepak:background="#e45b36"
+            deepak:listSelector="#6c033bf5">
+        </ListView>
+    </android.support.v4.widget.DrawerLayout>
+    <!-- navigation drawer ends here-->
+</RelativeLayout>
+            <!--<android.support.design.widget.AppBarLayout-->
+                <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--xmlns:tools="http://schemas.android.com/tools"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:theme="@style/AppTheme.AppBarOverlay">-->
+
+                <!--<android.support.v7.widget.Toolbar-->
+                    <!--android:id="@+id/toolbar"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="?attr/actionBarSize"-->
+                    <!--android:background="@layout/header_gradient"-->
+                    <!--app:popupTheme="@style/AppTheme.PopupOverlay" >-->
+                    <!--<LinearLayout android:id="@+id/header"-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="fill_parent"-->
+                        <!--android:background="@layout/header_gradient">-->
+                        <!--&lt;!&ndash; Logo Start&ndash;&gt;-->
+                        <!--<ImageView android:src="@drawable/logo"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_marginTop="6dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dip"/>-->
+                        <!--&lt;!&ndash; Logo Ends &ndash;&gt;-->
+                    <!--</LinearLayout>-->
+                <!--</android.support.v7.widget.Toolbar>-->
+
+            <!--</android.support.design.widget.AppBarLayout>-->
+
+
+
+
+

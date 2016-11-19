@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Recent Orders"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textStyle="bold"
+        android:id="@+id/recent_orders_tv"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopkeeper_recent_orders_list"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.dell.medmax.ShopkeeperActivities.FinalPlaceOrderActivity"
+    tools:showIn="@layout/activity_final_place_order">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Vendor Details"
+        android:id="@+id/vendor_details_tv"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#20B2AA"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Vendor Name "
+                android:fontFamily="cursive"
+                android:textSize="20sp"
+                android:layout_weight="0.5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="cursive"
+                android:textSize="15sp"
+                android:id="@+id/vendor_name_info"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Vendor Email ID "
+                android:fontFamily="cursive"
+                android:textSize="20sp"
+                android:layout_weight="0.5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="cursive"
+                android:textSize="15sp"
+                android:id="@+id/vendor_email_info"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Vendor Address "
+                android:fontFamily="cursive"
+                android:textSize="20sp"
+                android:layout_weight="0.5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="cursive"
+                android:textSize="15sp"
+                android:id="@+id/vendor_address_info"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="Vendor Contact "
+                android:fontFamily="cursive"
+                android:textSize="20sp"
+                android:layout_weight="0.5"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:fontFamily="cursive"
+                android:textSize="15sp"
+                android:id="@+id/vendor_contact_info"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+    </LinearLayout>
+            <LinearLayout
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="Total Price =>  Rs. "
+                    android:textSize="20sp"
+                    android:id="@+id/total_price_text"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:textSize="20sp"
+                    android:id="@+id/total_price_tv"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Items Ordered"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#20B2AA"
+        android:id="@+id/items_ordered_tv"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_gravity="center_horizontal" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/items_ordered_list_view"
+        android:layout_below="@+id/items_ordered_tv"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

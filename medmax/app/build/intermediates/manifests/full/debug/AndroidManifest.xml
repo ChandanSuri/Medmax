@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.medmax"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.dell.medmax.Additem"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.example.dell.medmax.StartActivity"
+            android:label="MedMax"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.dell.medmax.ForgotEmail"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.dell.medmax.ForgotPassword"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.dell.medmax.LoginActivity"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.dell.medmax.RegisterActivity"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.dell.medmax.FirstActivity"
+            android:label="@string/title_activity_additem"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.dell.medmax.Editdelete"
+            android:label="@string/title_activity_editdelete"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
+            android:label="@string/title_activity_shopkeeper_main"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.dell.medmax.ShopkeeperActivities.PlaceOrder2Activity"
+            android:label="Inventory"
+            android:parentActivityName="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.dell.medmax.ShopkeeperActivities.AboutVendorActivity"
+            android:label="About Vendor"
+            android:parentActivityName="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.dell.medmax.ShopkeeperActivities.FinalPlaceOrderActivity"
+            android:label="@string/title_activity_final_place_order"
+            android:parentActivityName="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
+            android:theme="@style/AppTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
+        </activity>
+        <activity android:name="com.example.dell.medmax.ShopkeeperActivities.OrderInfoActivity" />
+    </application>
+
+</manifest>

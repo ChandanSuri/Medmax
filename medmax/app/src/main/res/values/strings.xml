@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MedMax</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_update">Update</string>
+    <string name="title_activity_additem">Additem</string>
+    <string name="title_activity_delete">Delete</string>
+    <string name="title_activity_editdelete">Editdelete</string>
+    <array name="userType">
+        <item>Shopkeeper</item>
+        <item>Vendor</item>
+    </array>
+    <array name="layers_array">
+        <item>bow</item>
+        <item>wow</item>
+    </array>
+    <string name="menu">bow wow</string>
+    <string name="text">ADD</string>
+    <string name="title_activity_shopkeeper_main">ShopkeeperMainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_final_place_order">FinalPlaceOrderActivity</string>
+</resources>

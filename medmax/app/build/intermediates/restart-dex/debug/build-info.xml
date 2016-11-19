@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="7"
+    timestamp="810324488593988"
+    verifier="METHOD_DELETED" >
+
+    <task
+        name="javac"
+        duration="831" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="238" />
+    <task
+        name="verifier"
+        duration="33" />
+
+    <artifact
+        location="D:\Android\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
+
+    <build timestamp="809891447224438" >
+        <artifact
+            location="D:\Android\medmax\app\build\outputs\apk\app-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="810324488593988"
+        verifier="METHOD_DELETED" >
+        <artifact
+            location="D:\Android\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>
