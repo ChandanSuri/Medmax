@@ -12,6 +12,10 @@
         "source": "D:\\Android\\medmax\\app\\src\\main\\res\\drawable\\home.png"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\vendor.jpg",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\vendor.jpg"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\side_nav_bar.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
     },
@@ -296,6 +300,10 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\recent_back.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\recent_back.png"
+    },
+    {
         "merged": "D:\\Android\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_share.xml",
         "source": "D:\\Android\\medmax\\app\\src\\main\\res\\drawable\\ic_menu_share.xml"
     },
@@ -306,6 +314,10 @@
     {
         "merged": "D:\\Android\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
         "source": "D:\\Android\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_input_add.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\ic_input_add.png"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\images1.png",
