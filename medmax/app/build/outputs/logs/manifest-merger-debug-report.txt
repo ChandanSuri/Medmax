@@ -163,7 +163,7 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:65:9-73
 activity#com.example.dell.medmax.ShopkeeperActivities.FinalPlaceOrderActivity
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:74:9-82:20
 	android:label
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:76:13-69
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:76:13-56
 	android:parentActivityName
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:77:13-86
 	android:theme

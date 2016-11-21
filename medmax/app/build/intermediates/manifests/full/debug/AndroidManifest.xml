@@ -79,7 +79,7 @@
         </activity>
         <activity
             android:name="com.example.dell.medmax.ShopkeeperActivities.FinalPlaceOrderActivity"
-            android:label="@string/title_activity_final_place_order"
+            android:label="FinalPlaceOrderConfirmation"
             android:parentActivityName="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
             android:theme="@style/AppTheme" >
             <meta-data

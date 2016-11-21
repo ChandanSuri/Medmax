@@ -25,6 +25,9 @@ public class ShopkeeperMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
+    public static final String PLACE_ORDER_1 = "Vendors";
+    public static final String RECENT_ORDERS = "Recent Orders";
+    public static final String USER_DETAILS = "Account Info";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +40,7 @@ public class ShopkeeperMainActivity extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 getFragmentManager().beginTransaction().replace(R.id.shopkeeper_main,new ShopkeeperPlaceOrder1Fragment()).commit();
+                getSupportActionBar().setTitle(PLACE_ORDER_1);
             }
         });
 
@@ -54,6 +58,7 @@ public class ShopkeeperMainActivity extends AppCompatActivity
     protected void onStart(){
         super.onStart();
         getFragmentManager().beginTransaction().replace(R.id.shopkeeper_main, new ShopkeeperMainFragment()).commit();
+        getSupportActionBar().setTitle(RECENT_ORDERS);
     }
 
     @Override
@@ -110,24 +115,41 @@ public class ShopkeeperMainActivity extends AppCompatActivity
 
         if (id == R.id.order_history) {
             getFragmentManager().beginTransaction().replace(R.id.shopkeeper_main,new ShopkeeperMainFragment()).commit();
+            getSupportActionBar().setTitle(RECENT_ORDERS);
             drawer.closeDrawers();
         } else if (id == R.id.new_order) {
             getFragmentManager().beginTransaction().remove(new ShopkeeperMainFragment()).commit();
             getFragmentManager().beginTransaction().replace(R.id.shopkeeper_main,new ShopkeeperPlaceOrder1Fragment()).commit();
+            getSupportActionBar().setTitle(PLACE_ORDER_1);
             drawer.closeDrawers();
         } else if (id == R.id.account) {
             getFragmentManager().beginTransaction().replace(R.id.shopkeeper_main,new UserDetail()).commit();
+            getSupportActionBar().setTitle(USER_DETAILS);
             drawer.closeDrawers();
         } else if (id == R.id.logout) {
-            SharedPreferences sharedPreferences=getSharedPreferences("login", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.clear();
-            editor.commit();
-            Intent intent = new Intent(ShopkeeperMainActivity.this, com.example.dell.medmax.LoginActivity.class);
-            startActivity(intent);
-            finish();
+            AlertDialog.Builder builder = new AlertDialog.Builder(ShopkeeperMainActivity.this);
+            builder.setTitle("LOGOUT !!");
+            builder.setMessage("Are You Sure You want to Logout !!");
+            builder.setCancelable(true);
+            builder.setPositiveButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            }).setNegativeButton("YES, LOGOUT!", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    SharedPreferences sharedPreferences=getSharedPreferences("login", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.clear();
+                    editor.commit();
+                    Intent intent = new Intent(ShopkeeperMainActivity.this, com.example.dell.medmax.LoginActivity.class);
+                    startActivity(intent);
+                    finish();
+                    Toast.makeText(ShopkeeperMainActivity.this, "Logout!!", Toast.LENGTH_SHORT).show();
+                }
+            }).create().show();
             drawer.closeDrawers();
-            Toast.makeText(ShopkeeperMainActivity.this, "Logout!!", Toast.LENGTH_SHORT).show();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
