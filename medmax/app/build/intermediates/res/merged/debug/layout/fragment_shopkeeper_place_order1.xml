@@ -5,10 +5,40 @@
     tools:context="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperPlaceOrder1Fragment">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/could_not_load_layout"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:id="@+id/not_load_recent_order"
+            android:src="@drawable/not_load_recent"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sorry, There were no Vendors Found!!"
+            android:fontFamily="monospace"
+            android:textColor="#90C3D4"
+            android:id="@+id/not_load_recent_order_tv" />
+
+    </LinearLayout>
+
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/shop_order_vendor_list"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

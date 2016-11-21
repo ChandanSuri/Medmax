@@ -1,5 +1,6 @@
 package com.example.dell.medmax.ShopkeeperActivities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +39,8 @@ public class OrderInfoActivity extends AppCompatActivity {
     private ArrayList<HashMap<String, String>> orderInfo = new ArrayList<>();
     private String emailVendor, totalCost;
     private ListView orderedItemsLv;
+    private ProgressDialog mProgress;
+    private LinearLayout orderDetailsLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,12 +62,14 @@ public class OrderInfoActivity extends AppCompatActivity {
         totalCostTv = (TextView)findViewById(R.id.total_cost_tv);
 
         orderedItemsLv = (ListView)findViewById(R.id.ordered_items_list_view);
+        orderDetailsLayout = (LinearLayout)findViewById(R.id.order_details_layout);
 
         getVendorData();
-        getProductsOrderedData();
     }
 
     private void getVendorData(){
+        mProgress = ProgressDialog.show(OrderInfoActivity.this,"Loading ...","Please Wait !!");
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, VENDOR_INFO_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -72,10 +78,13 @@ public class OrderInfoActivity extends AppCompatActivity {
                 vendorEmailTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_EMAIL_STR));
                 vendorAddressTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_ADDRESS_STR));
                 vendorContactTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_CONTACT_STR));
+                getProductsOrderedData();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                mProgress.dismiss();
+                finish();
                 Toast.makeText(OrderInfoActivity.this, "Please Check Your Internet Connectivity !!", Toast.LENGTH_SHORT).show();
             }
         }){
@@ -101,6 +110,8 @@ public class OrderInfoActivity extends AppCompatActivity {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, ORDER_INFO_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                mProgress.dismiss();
+                orderDetailsLayout.setVisibility(View.VISIBLE);
                 orderInfo = getJSONProductData(response);
                 OrderedItemInfoListAdapter orderedItemInfoListAdapter = new OrderedItemInfoListAdapter(orderInfo);
                 orderedItemsLv.setAdapter(orderedItemInfoListAdapter);
@@ -110,6 +121,8 @@ public class OrderInfoActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                mProgress.dismiss();
+                finish();
                 Toast.makeText(OrderInfoActivity.this, "Please Check Your Internet Connectivity !!", Toast.LENGTH_SHORT).show();
             }
         }){

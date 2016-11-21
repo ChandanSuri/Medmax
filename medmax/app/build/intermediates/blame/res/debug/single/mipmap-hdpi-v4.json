@@ -2,5 +2,9 @@
     {
         "merged": "D:\\Android\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "D:\\Android\\medmax\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
 ]

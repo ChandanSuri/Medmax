@@ -1,5 +1,6 @@
 package com.example.dell.medmax.ShopkeeperActivities;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -17,6 +18,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -56,7 +58,11 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
     private TextView totalPaymentTv;
     float finalTotalPay;
     RequestQueue requestQueue;
-
+    private FloatingActionButton fab;
+    private LinearLayout couldNotLoad;
+    private TextView couldNotLoadTv;
+    private ProgressDialog mProgress;
+    private LinearLayout finalPlaceOrderLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +72,7 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        finalPlaceOrderLayout = (LinearLayout)findViewById(R.id.final_place_order_info_layout);
         vendorNameTv = (TextView)findViewById(R.id.vendor_name_info);
         vendorEmailTv = (TextView) findViewById(R.id.vendor_email_info);
         vendorAddressTv = (TextView) findViewById(R.id.vendor_address_info);
@@ -84,9 +91,11 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
         totalPaymentTv = (TextView)findViewById(R.id.total_price_tv);
         Intent intent = getIntent();
         emailVendor = intent.getStringExtra("EmailVendor");
+        fab = (FloatingActionButton) findViewById(R.id.place_order);
+        couldNotLoad = (LinearLayout)findViewById(R.id.could_not_load_layout);
+        couldNotLoadTv = (TextView)findViewById(R.id.not_load_recent_order_tv);
         getData();
         showOrderedItemsList();
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.place_order);
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,18 +142,33 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
     }
 
     private void getData(){
+        mProgress = ProgressDialog.show(FinalPlaceOrderActivity.this,"Loading ...","Please Wait !!");
         StringRequest stringRequest = new StringRequest(Request.Method.POST, VENDOR_INFO_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                vendorInfo = getJSON(response);
-                vendorNameTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_NAME_STR));
-                vendorEmailTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_EMAIL_STR));
-                vendorAddressTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_ADDRESS_STR));
-                vendorContactTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_CONTACT_STR));
+                if (response.equals("[]")) {
+                    mProgress.dismiss();
+                    couldNotLoad.setVisibility(View.VISIBLE);
+                    couldNotLoadTv.setText("Could not Load the information of the vendor, needed to go Back !!");
+                    Toast.makeText(FinalPlaceOrderActivity.this, "Could Not Load the Information!!", Toast.LENGTH_SHORT).show();
+                } else {
+                    mProgress.dismiss();
+                    couldNotLoad.setVisibility(View.GONE);
+                    fab.setVisibility(View.VISIBLE);
+                    finalPlaceOrderLayout.setVisibility(View.VISIBLE);
+                    vendorInfo = getJSON(response);
+                    vendorNameTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_NAME_STR));
+                    vendorEmailTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_EMAIL_STR));
+                    vendorAddressTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_ADDRESS_STR));
+                    vendorContactTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_CONTACT_STR));
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                mProgress.dismiss();
+                couldNotLoad.setVisibility(View.VISIBLE);
+                couldNotLoadTv.setText("Sorry, There was some Connectivity Problem, Could Not Load Data, Go Back !!");
                 Toast.makeText(FinalPlaceOrderActivity.this, "Please Check Your Internet Connectivity !!", Toast.LENGTH_SHORT).show();
             }
         }){

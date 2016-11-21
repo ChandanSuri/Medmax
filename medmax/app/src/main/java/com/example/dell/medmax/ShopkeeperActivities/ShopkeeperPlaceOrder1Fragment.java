@@ -1,6 +1,7 @@
 package com.example.dell.medmax.ShopkeeperActivities;
 
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,6 +38,9 @@ public class ShopkeeperPlaceOrder1Fragment extends Fragment {
     ListView vendorList;
     public static final String VENDOR_LIST_URL = "http://medmax.pe.hu/vendor_list.php";
     private ArrayList<HashMap<String,String>> vendorArrayList = new ArrayList<>();
+    private LinearLayout couldNotLoad;
+    private TextView couldNotLoadTv;
+    private ProgressDialog mProgress;
 
     public ShopkeeperPlaceOrder1Fragment() {
         // Required empty public constructor
@@ -53,57 +59,72 @@ public class ShopkeeperPlaceOrder1Fragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         vendorList = (ListView)getActivity().findViewById(R.id.shop_order_vendor_list);
+        couldNotLoad = (LinearLayout)getActivity().findViewById(R.id.could_not_load_layout);
+        couldNotLoadTv = (TextView)getActivity().findViewById(R.id.not_load_recent_order_tv);
         Log.d("Got list view","121212");
         getData();
     }
 
     private void getData(){
+        mProgress = ProgressDialog.show(getActivity(),"Loading ...","Please Wait !!");
         StringRequest stringRequest=new StringRequest(VENDOR_LIST_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                vendorArrayList = getJSON(response);
-                Log.d("Got response",vendorArrayList.toString());
-                VendorListAdapter vendorListAdapter =new VendorListAdapter(vendorArrayList);
-                vendorList.setAdapter(vendorListAdapter);
-                vendorList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                        AlertDialog.Builder alertDialogBuilder =new AlertDialog.Builder(getActivity());
-                        alertDialogBuilder.setTitle("Decision ?");
-                        alertDialogBuilder.setMessage("What would you like to see ?");
-                        alertDialogBuilder.setCancelable(true);
-                        alertDialogBuilder.setPositiveButton("INVENTORY", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent showInventoryIntent = new Intent(getActivity(), PlaceOrder2Activity.class);
-                                showInventoryIntent.putExtra("EmailVendor",
-                                        vendorArrayList.get(position).get(ParseJSONVendorList.VENDOR_EMAIL_STR));
-                                startActivity(showInventoryIntent);
-                            }
-                        });
-                        alertDialogBuilder.setNeutralButton("ABOUT VENDOR", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Intent aboutVendorIntent = new Intent(getActivity(), AboutVendorActivity.class);
-                                aboutVendorIntent.putExtra("EmailVendor",
-                                        vendorArrayList.get(position).get(ParseJSONVendorList.VENDOR_EMAIL_STR));
-                                startActivity(aboutVendorIntent);
-                            }
-                        });
-                        alertDialogBuilder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.cancel();
-                            }
-                        });
-                        AlertDialog alertDialog = alertDialogBuilder.create();
-                        alertDialog.show();
-                    }
-                });
+                if (response.equals("[]")) {
+                    couldNotLoad.setVisibility(View.VISIBLE);
+                    mProgress.dismiss();
+                    Toast.makeText(getActivity(), "Could Not Load Vendors List!", Toast.LENGTH_SHORT).show();
+                } else {
+                    mProgress.dismiss();
+                    couldNotLoad.setVisibility(View.GONE);
+                    vendorList.setVisibility(View.VISIBLE);
+                    vendorArrayList = getJSON(response);
+                    Log.d("Got response", vendorArrayList.toString());
+                    VendorListAdapter vendorListAdapter = new VendorListAdapter(vendorArrayList);
+                    vendorList.setAdapter(vendorListAdapter);
+                    vendorList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
+                            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getActivity());
+                            alertDialogBuilder.setTitle("Decision ?");
+                            alertDialogBuilder.setMessage("What would you like to see ?");
+                            alertDialogBuilder.setCancelable(true);
+                            alertDialogBuilder.setPositiveButton("INVENTORY", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent showInventoryIntent = new Intent(getActivity(), PlaceOrder2Activity.class);
+                                    showInventoryIntent.putExtra("EmailVendor",
+                                            vendorArrayList.get(position).get(ParseJSONVendorList.VENDOR_EMAIL_STR));
+                                    startActivity(showInventoryIntent);
+                                }
+                            });
+                            alertDialogBuilder.setNeutralButton("ABOUT VENDOR", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    Intent aboutVendorIntent = new Intent(getActivity(), AboutVendorActivity.class);
+                                    aboutVendorIntent.putExtra("EmailVendor",
+                                            vendorArrayList.get(position).get(ParseJSONVendorList.VENDOR_EMAIL_STR));
+                                    startActivity(aboutVendorIntent);
+                                }
+                            });
+                            alertDialogBuilder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                            AlertDialog alertDialog = alertDialogBuilder.create();
+                            alertDialog.show();
+                        }
+                    });
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                mProgress.dismiss();
+                couldNotLoad.setVisibility(View.VISIBLE);
+                couldNotLoadTv.setText("Sorry, There was some Connectivity Problem, Could Not Load Data !!");
                 Toast.makeText(getActivity(), "Please Check Your Internet Connectivity !!", Toast.LENGTH_SHORT).show();
             }
         });

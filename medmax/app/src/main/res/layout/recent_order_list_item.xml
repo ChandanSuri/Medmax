@@ -4,11 +4,12 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:padding="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:weightSum="1">
 
         <TextView
@@ -30,6 +31,7 @@
             android:id="@+id/vendor_email_tv" />
     </LinearLayout>
     <LinearLayout
+        android:padding="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

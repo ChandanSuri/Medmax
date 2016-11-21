@@ -8,6 +8,18 @@
         "source": "D:\\Android\\medmax\\app\\src\\main\\res\\menu\\activity_shopkeeper_main_drawer.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_shopkeeper_main_drawer.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\menu\\activity_shopkeeper_main_drawer.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\menu\\shopkeeper_main.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\menu\\shopkeeper_main.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_drawer.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\menu\\activity_main_drawer.xml"
+    },
+    {
         "merged": "D:\\Android\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\menu\\shopkeeper_main.xml",
         "source": "D:\\Android\\medmax\\app\\src\\main\\res\\menu\\shopkeeper_main.xml"
     }

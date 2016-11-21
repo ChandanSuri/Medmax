@@ -4,37 +4,48 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="810324488593988"
-    verifier="METHOD_DELETED" >
+    timestamp="1013932317293003" >
 
     <task
         name="javac"
-        duration="831" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="238" />
+        duration="0" />
     <task
         name="verifier"
-        duration="33" />
+        duration="0" />
 
     <artifact
-        location="D:\Android\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
-        type="DEX" />
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
 
-    <build timestamp="809891447224438" >
+    <build timestamp="1003235458244740" >
         <artifact
-            location="D:\Android\medmax\app\build\outputs\apk\app-debug.apk"
+            location="D:\Android\MedmaxProj\medmax\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="810324488593988"
-        verifier="METHOD_DELETED" >
+    <build timestamp="1012708504177106" >
         <artifact
-            location="D:\Android\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="1013932317293003" >
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

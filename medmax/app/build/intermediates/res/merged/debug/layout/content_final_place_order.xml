@@ -8,6 +8,35 @@
     tools:context="com.example.dell.medmax.ShopkeeperActivities.FinalPlaceOrderActivity"
     tools:showIn="@layout/activity_final_place_order">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/could_not_load_layout"
+        android:visibility="invisible"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitXY"
+            android:id="@+id/not_load_recent_order"
+            android:src="@drawable/not_load_recent"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Sorry, There were no Recent Orders Found!!"
+            android:fontFamily="monospace"
+            android:textColor="#90C3D4"
+            android:id="@+id/not_load_recent_order_tv" />
+
+    </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:fillViewport="true"
@@ -16,7 +45,9 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/final_place_order_info_layout"
+            android:visibility="invisible">
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,6 +62,7 @@
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
+        android:padding="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,6 +70,7 @@
         android:id="@+id/linearLayout">
 
         <LinearLayout
+            android:padding="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -59,6 +92,7 @@
                 android:layout_weight="0.5"/>
         </LinearLayout>
         <LinearLayout
+            android:padding="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -80,6 +114,7 @@
                 android:layout_weight="0.5"/>
         </LinearLayout>
         <LinearLayout
+            android:padding="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -101,6 +136,7 @@
                 android:layout_weight="0.5"/>
         </LinearLayout>
         <LinearLayout
+            android:padding="5dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -160,6 +196,7 @@
         android:layout_gravity="center_horizontal" />
 
     <ListView
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/items_ordered_list_view"

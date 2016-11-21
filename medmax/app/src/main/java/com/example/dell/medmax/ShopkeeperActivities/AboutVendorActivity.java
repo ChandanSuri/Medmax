@@ -1,5 +1,6 @@
 package com.example.dell.medmax.ShopkeeperActivities;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
@@ -7,6 +8,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +32,8 @@ public class AboutVendorActivity extends AppCompatActivity {
     public static final String VENDOR_INFO_URL = "http://medmax.pe.hu/show_vendor_detail.php";
     private TextView vendorNameTv, vendorEmailTv, vendorContactTv, vendorAddressTv;
     private ArrayList<HashMap<String, String>> vendorInfo = new ArrayList<>();
+    private ProgressDialog mProgress;
+    private LinearLayout vendorDetailsLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +46,20 @@ public class AboutVendorActivity extends AppCompatActivity {
         vendorEmailTv = (TextView) findViewById(R.id.vendor_email_info);
         vendorAddressTv = (TextView) findViewById(R.id.vendor_address_info);
         vendorContactTv = (TextView)findViewById(R.id.vendor_contact_info);
+        vendorDetailsLayout = (LinearLayout)findViewById(R.id.vendor_details_layout);
 
         Intent intent = getIntent();
         emailVendor = intent.getStringExtra("EmailVendor");
         getData();
     }
     private void getData(){
+        mProgress = ProgressDialog.show(AboutVendorActivity.this,"Loading ...","Please Wait !!");
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, VENDOR_INFO_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                mProgress.dismiss();
+                vendorDetailsLayout.setVisibility(View.VISIBLE);
                 vendorInfo = getJSON(response);
                 vendorNameTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_NAME_STR));
                 vendorEmailTv.setText(vendorInfo.get(0).get(ParseJSONVendorInfo.VENDOR_EMAIL_STR));
@@ -59,6 +69,8 @@ public class AboutVendorActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                mProgress.dismiss();
+                finish();
                 Toast.makeText(AboutVendorActivity.this, "Please Check Your Internet Connectivity !!", Toast.LENGTH_SHORT).show();
             }
         }){
