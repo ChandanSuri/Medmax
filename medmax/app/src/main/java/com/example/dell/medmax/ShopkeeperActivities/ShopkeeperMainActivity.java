@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
+import android.util.AttributeSet;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,6 +17,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dell.medmax.R;
@@ -25,16 +28,21 @@ public class ShopkeeperMainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     DrawerLayout drawer;
+    //Activity Names
     public static final String PLACE_ORDER_1 = "Vendors";
     public static final String RECENT_ORDERS = "Recent Orders";
     public static final String USER_DETAILS = "Account Info";
+
+    private TextView shopNameNavTv, shopMailNavTv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shopkeeper_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        getWindow().setSoftInputMode(
+                WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +60,13 @@ public class ShopkeeperMainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.shop_nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        shopMailNavTv = (TextView)navigationView.getHeaderView(0).findViewById(R.id.shopkeeper_mail_nav);
+        shopNameNavTv = (TextView)navigationView.getHeaderView(0).findViewById(R.id.shopkeeper_name_nav);
+        SharedPreferences sharedPreferences = getSharedPreferences("login", MODE_PRIVATE);
+        String shopEmail = sharedPreferences.getString("mail","Sorry ! Not Able to retrieve !!");
+        String shopName = sharedPreferences.getString("name","Could Not be Retrieved!");
+        shopMailNavTv.setText(shopEmail);
+        shopNameNavTv.setText(shopName);
     }
 
     @Override

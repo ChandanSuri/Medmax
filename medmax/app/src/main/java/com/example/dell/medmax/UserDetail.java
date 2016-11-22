@@ -2,6 +2,7 @@ package com.example.dell.medmax;
 import android.app.Fragment;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -24,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.dell.medmax.R;
+import com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -32,6 +35,7 @@ import java.util.Map;
  * Created by Aggarwal on 08-10-2016.
  */
 public class UserDetail extends Fragment {
+
     EditText name_edit;
     EditText mail_edit;
     EditText contact_edit;
@@ -41,6 +45,7 @@ public class UserDetail extends Fragment {
     boolean flag,flag1;
     String url="http://medmax.pe.hu/updateuser.php";
     RequestQueue requestQueue;
+    private ProgressDialog mProgress;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -82,6 +87,7 @@ public class UserDetail extends Fragment {
                     button.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            mProgress = ProgressDialog.show(getActivity(),"Loading ...","Please Wait !!");
                             if(flag)
                             {
                                 final String new_name=name_edit.getText().toString();
@@ -91,6 +97,7 @@ public class UserDetail extends Fragment {
                                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String s) {
+                                        mProgress.dismiss();
                                         if(s.equalsIgnoreCase("1"))
                                         {
                                             flag1=true;
@@ -99,13 +106,13 @@ public class UserDetail extends Fragment {
                                         else if(s.equalsIgnoreCase("2"))
                                         {
                                             flag1=false;
-//                                Toast.makeText(RegisterActivity.this, "Failed to process.TRY AGAIN", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getActivity(), "Failed to process, please Try Again !!", Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 }, new Response.ErrorListener() {
                                     @Override
                                     public void onErrorResponse(VolleyError error) {
-//                            Toast.makeText(RegisterActivity.this, "Failed to process.TRY AGAIN" , Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getActivity(), "Failed to process, please Try Again!!" , Toast.LENGTH_SHORT).show();
                                         flag1=false;
                                     }
                                 }) {
@@ -135,7 +142,7 @@ public class UserDetail extends Fragment {
                                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
-                                            Intent intent=new Intent(getActivity(), com.example.dell.medmax.FirstActivity.class);
+                                            Intent intent=new Intent(getActivity(), ShopkeeperMainActivity.class);
                                             startActivity(intent);
 
                                         }

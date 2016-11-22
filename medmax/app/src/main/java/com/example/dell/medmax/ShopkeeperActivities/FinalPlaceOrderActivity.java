@@ -61,7 +61,7 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
     private FloatingActionButton fab;
     private LinearLayout couldNotLoad;
     private TextView couldNotLoadTv;
-    private ProgressDialog mProgress;
+    private ProgressDialog mProgress,mPlaceProgress;
     private LinearLayout finalPlaceOrderLayout;
 
     @Override
@@ -106,6 +106,7 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
                 builder.setPositiveButton("YES, PLACE THE ORDER", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        mPlaceProgress = ProgressDialog.show(FinalPlaceOrderActivity.this,"Placing the Order ...","Please Wait for a while !!");
                         requestQueue = Volley.newRequestQueue(FinalPlaceOrderActivity.this);
                         sendDataToShopkeeperTable();
                     }
@@ -345,7 +346,19 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
                 Log.d("ORDER ID =>", orderId[0]);
                 if (orderId[0]!=null) {
                     sendDataToItemsTable();
-                    Toast.makeText(FinalPlaceOrderActivity.this, "Order Has Been Placed Successfully !", Toast.LENGTH_SHORT).show();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(FinalPlaceOrderActivity.this);
+                    builder.setTitle("Order Placed !!");
+                    builder.setMessage("Your Order has been placed successfully with an Order Id =>"+orderId[0]);
+                    builder.setMessage("Thank You for Placing an order with us !");
+                    builder.setCancelable(false);
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dropSQLTable();
+                            closeAllActivities();
+                        }
+                    }).create().show();
+                    //Toast.makeText(FinalPlaceOrderActivity.this, "Order Has Been Placed Successfully !", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(FinalPlaceOrderActivity.this, "Sorry, the Order could be place!!", Toast.LENGTH_SHORT).show();
                 }
@@ -390,6 +403,7 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
                         public void onResponse(String response) {
                             if (Objects.equals(response, "1")){
                                 Log.d("response of Order 2", "Order Placed !");
+                                mPlaceProgress.dismiss();
                             }else {
                                 Toast.makeText(FinalPlaceOrderActivity.this, "There was some Error, Check Internet Connectivity!!", Toast.LENGTH_SHORT).show();
                             }
@@ -422,8 +436,6 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
             }
         }
         c1.close();
-        dropSQLTable();
-        closeAllActivities();
     }
 
     private void dropSQLTable(){
