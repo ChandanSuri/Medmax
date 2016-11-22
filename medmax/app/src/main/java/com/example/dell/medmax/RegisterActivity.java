@@ -5,6 +5,8 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -31,7 +33,7 @@ import java.util.Map;
 /**
  * Created by Aggarwal on 18-08-2016.
  */
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatActivity {
     EditText editName;
     EditText editEmailId;
     EditText editPhone;
@@ -53,7 +55,9 @@ public class RegisterActivity extends Activity {
         setContentView(R.layout.register);
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Sign Up");
         requestQueue= Volley.newRequestQueue(RegisterActivity.this);
         requestQueue1= Volley.newRequestQueue(RegisterActivity.this);
         loginScreen = (TextView) findViewById(R.id.link_to_login);

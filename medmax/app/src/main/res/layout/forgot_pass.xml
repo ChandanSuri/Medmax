@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark">
     <!--  Header Starts-->
-    <LinearLayout android:id="@+id/header"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp"
-        android:background="@layout/header_gradient"
-        android:paddingTop="5dip"
-        android:paddingBottom="5dip">
-        <!-- Logo Start-->
-        <ImageView android:src="@drawable/logo"
-            android:layout_width="wrap_content"
-            android:layout_marginTop="6dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"/>
-        <!-- Logo Ends -->
-    </LinearLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
     <!--  Header Ends -->
     <!-- Footer Start -->
     <LinearLayout android:id="@+id/footer"
@@ -34,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dip"
-        android:layout_below="@id/header">
+        android:layout_below="@id/toolbar">
         <!--  Email Label -->
         <TextView android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -64,6 +59,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dip"
+            android:background="@android:color/darker_gray"
             android:text="Save Changes"/>
     </LinearLayout>
 </RelativeLayout>

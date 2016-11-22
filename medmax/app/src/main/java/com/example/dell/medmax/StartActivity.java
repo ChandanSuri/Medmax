@@ -47,8 +47,9 @@ public class StartActivity extends Activity {
                 } finally {
                     if(!flag)
                     {
-                        Toast.makeText(StartActivity.this, "Connection Failed, Please Connect ...", Toast.LENGTH_SHORT).show();
                         finish();
+                        Toast.makeText(StartActivity.this, "Connection Failed, Please Connect ...", Toast.LENGTH_SHORT).show();
+
                     }
                     else if(login.equalsIgnoreCase("true"))
                     {

@@ -7,6 +7,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -29,7 +31,7 @@ import org.json.JSONObject;
 /**
  * Created by Aggarwal on 18-08-2016.
  */
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatActivity {
     EditText loginId;
     EditText password;
     Spinner userType;
@@ -47,6 +49,9 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         // setting default screen to login.xml
         setContentView(R.layout.login);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Login");
         getWindow().setSoftInputMode(
                 WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         sharedPreferences=this.getSharedPreferences("login", Context.MODE_PRIVATE);

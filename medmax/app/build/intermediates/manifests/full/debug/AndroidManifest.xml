@@ -24,7 +24,7 @@
         <activity
             android:name="com.example.dell.medmax.StartActivity"
             android:label="MedMax"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -34,19 +34,19 @@
         <activity
             android:name="com.example.dell.medmax.ForgotEmail"
             android:label="@string/title_activity_additem"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.dell.medmax.ForgotPassword"
             android:label="@string/title_activity_additem"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.dell.medmax.LoginActivity"
-            android:label="@string/title_activity_additem"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Login"
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.dell.medmax.RegisterActivity"
             android:label="@string/title_activity_additem"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name="com.example.dell.medmax.FirstActivity"
             android:label="@string/title_activity_additem"

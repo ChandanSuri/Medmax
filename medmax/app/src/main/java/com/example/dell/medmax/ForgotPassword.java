@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -27,7 +29,7 @@ import java.util.Map;
 /**
  * Created by Aggarwal on 08-10-2016.
  */
-public class ForgotPassword extends Activity{
+public class ForgotPassword extends AppCompatActivity{
     EditText pass,pass1;
     Button btn;
     String url="http://medmax.pe.hu/changepassword.php";
@@ -37,6 +39,9 @@ public class ForgotPassword extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.forgot_pass);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Reset Password !");
         requestQueue = Volley.newRequestQueue(ForgotPassword.this);
         final String email=getIntent().getStringExtra("email");
         pass=(EditText)findViewById(R.id.forgot_password);

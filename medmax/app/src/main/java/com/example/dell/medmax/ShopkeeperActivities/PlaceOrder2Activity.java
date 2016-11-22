@@ -4,7 +4,9 @@ import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
@@ -23,6 +25,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +55,7 @@ public class PlaceOrder2Activity extends AppCompatActivity {
     private LinearLayout couldNotLoad;
     private TextView couldNotLoadTv;
     private ProgressDialog mProgress;
+    private static int itemCount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,25 +73,39 @@ public class PlaceOrder2Activity extends AppCompatActivity {
         proceedFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(PlaceOrder2Activity.this);
-                builder.setTitle("Proceed to Checkout !");
-                builder.setMessage("Are You Sure that you want to proceed to checkout ?");
-                builder.setCancelable(true);
-                builder.setPositiveButton("YES, PROCEED", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent proceedIntent = new Intent(PlaceOrder2Activity.this,FinalPlaceOrderActivity.class);
-                        proceedIntent.putExtra("EmailVendor", emailVendor);
-                        startActivity(proceedIntent);
-                    }
-                })
-                .setNegativeButton("NO", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-                builder.create().show();
+                if (itemCount != 0) {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(PlaceOrder2Activity.this);
+                    builder.setTitle("Proceed to Checkout !");
+                    builder.setMessage("Are You Sure that you want to proceed to checkout ?");
+                    builder.setCancelable(true);
+                    builder.setPositiveButton("YES, PROCEED", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            Intent proceedIntent = new Intent(PlaceOrder2Activity.this, FinalPlaceOrderActivity.class);
+                            proceedIntent.putExtra("EmailVendor", emailVendor);
+                            startActivity(proceedIntent);
+                        }
+                    })
+                            .setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    dialog.cancel();
+                                }
+                            });
+                    builder.create().show();
+                }else {
+                    AlertDialog.Builder builder = new AlertDialog.Builder(PlaceOrder2Activity.this);
+                    builder.setTitle("No Items Selected!!");
+                    builder.setMessage("You Have No Items in Your Cart !!");
+                    builder.setCancelable(true);
+                    builder.setPositiveButton("OK !", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+                    builder.create().show();
+                }
             }
         });
     }
@@ -131,6 +149,8 @@ public class PlaceOrder2Activity extends AppCompatActivity {
                                         .setPositiveButton("CONFIRM", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
+                                                itemCount++;
+                                                proceedFab.setVisibility(View.VISIBLE);
                                                 String qty = input.getText().toString();
                                                 Toast.makeText(PlaceOrder2Activity.this, "Qty = " + qty, Toast.LENGTH_SHORT).show();
                                                 cb.setChecked(true);
@@ -154,6 +174,12 @@ public class PlaceOrder2Activity extends AppCompatActivity {
                                         .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
+                                                itemCount--;
+                                                if (itemCount==0){
+                                                    proceedFab.setVisibility(View.INVISIBLE);
+                                                }else {
+                                                    proceedFab.setVisibility(View.VISIBLE);
+                                                }
                                                 cb.setChecked(false);
                                                 removeFromDeviceDatabase(itemNameTv);
                                             }
@@ -244,6 +270,13 @@ public class PlaceOrder2Activity extends AppCompatActivity {
                 inventoryListViewHolder = (InventoryListViewHolder)convertView.getTag();
             }
             HashMap<String, String> thisItem = getItem(position);
+            String ItemName = thisItem.get(ParseJSONInventoryList.ITEM_NAME_STR);
+            if(checkForItemName(ItemName))
+            {
+                inventoryListViewHolder.itemCheck.setChecked(true);
+            }else {
+                inventoryListViewHolder.itemCheck.setChecked(false);
+            }
             inventoryListViewHolder.itemNameTv.setText(thisItem.get(ParseJSONInventoryList.ITEM_NAME_STR));
             inventoryListViewHolder.itemCompanyNameTv.setText(thisItem.get(ParseJSONInventoryList.ITEM_COMP_NAME_STR));
             inventoryListViewHolder.itemPriceTv.setText(thisItem.get(ParseJSONInventoryList.ITEM_PRICE_STR));
@@ -252,6 +285,26 @@ public class PlaceOrder2Activity extends AppCompatActivity {
         }
     }
 
+    private boolean checkForItemName(String itemName){
+        SQLiteDatabase myDb = DbOpener.openWritableDatabase(this);
+        String SQLQuery = "SELECT "+OrderTable.Columns.ITEM_NAME+" FROM "+OrderTable.TABLE_NAME+
+                " WHERE "+OrderTable.Columns.ITEM_NAME+" = ?";
+        Cursor cursor;
+        cursor = myDb.rawQuery(SQLQuery, new String[]{itemName});
+        if (cursor!=null){
+            if (cursor.moveToFirst()) {
+                do {
+                    String orderedItemName = cursor.getString(cursor.getColumnIndex(OrderTable.Columns.ITEM_NAME));
+                    if (orderedItemName!=null) {
+                        cursor.close();
+                        return true;
+                    }
+                }while (cursor.moveToNext());
+            }
+        }
+        cursor.close();
+        return false;
+    }
     private void saveToDeviceDatabase(String itemName, String itemCompName, float itemPrice, int qty){
         SQLiteDatabase myDb = DbOpener.openWritableDatabase(this);
         Order order = new Order(itemName, itemCompName, itemPrice, qty, (float) 0.0);

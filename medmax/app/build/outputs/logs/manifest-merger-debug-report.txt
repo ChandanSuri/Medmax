@@ -65,7 +65,7 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:18:9-27
 	android:label
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:20:13-35
 	android:theme
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:21:13-56
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:21:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:19:13-42
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
@@ -79,35 +79,35 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:25:17-7
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:25:27-74
 activity#com.example.dell.medmax.ForgotEmail
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:28:9-31:59
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:28:9-31:47
 	android:label
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:30:13-59
 	android:theme
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:31:13-56
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:31:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:29:13-40
 activity#com.example.dell.medmax.ForgotPassword
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:32:9-35:59
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:32:9-35:47
 	android:label
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:34:13-59
 	android:theme
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:35:13-56
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:35:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:33:13-43
 activity#com.example.dell.medmax.LoginActivity
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:36:9-39:59
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:36:9-39:47
 	android:label
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:38:13-59
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:38:13-34
 	android:theme
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:39:13-56
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:39:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:37:13-42
 activity#com.example.dell.medmax.RegisterActivity
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:40:9-43:59
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:40:9-43:47
 	android:label
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:42:13-59
 	android:theme
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:43:13-56
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:43:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:41:13-45
 activity#com.example.dell.medmax.FirstActivity
