@@ -43,7 +43,8 @@ public class LoginActivity extends AppCompatActivity {
     String url = "http://medmax.pe.hu/loginscheck.php";
     SharedPreferences sharedPreferences=null;
     TextView forgotpass;
-    boolean flag;
+    private boolean noAccount;
+    private boolean passwordWrong, userTypeWrong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +63,7 @@ public class LoginActivity extends AppCompatActivity {
         registerScreen = (TextView) findViewById(R.id.link_to_register);
         forgotpass=(TextView)findViewById(R.id.link_to_forgot);
         login=(Button)findViewById(R.id.btnLogin);
+        Boolean connection = getIntent().getBooleanExtra("Connection", false);
         // Listening to register new account link
         registerScreen.setOnClickListener(new View.OnClickListener() {
 
@@ -83,6 +85,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                noAccount = true;
                 email=loginId.getText().toString();
                 pass=password.getText().toString();
                 userTypes=userType.getSelectedItem().toString();
@@ -125,7 +128,9 @@ public class LoginActivity extends AppCompatActivity {
                                         editor.putString("usertype",usertype1);
                                         editor.putString("address",address1);
                                         editor.commit();
-                                        flag=true;
+                                        noAccount = false;
+                                        passwordWrong = false;
+                                        userTypeWrong = false;
 //                                        getFragmentManager().beginTransaction().replace(R.id.frame,new Ride_Available()).commit();
                                         if(usertype1.equalsIgnoreCase("vendor")) {
                                             Intent intent = new Intent(LoginActivity.this, FirstActivity.class);        //problem
@@ -141,12 +146,26 @@ public class LoginActivity extends AppCompatActivity {
                                             break;
                                             //Toast.makeText(LoginActivity.this, "Shopkeeper page still under construction", Toast.LENGTH_SHORT).show();
                                         }
+                                    }else if (email1.equalsIgnoreCase(email) && userTypes.equalsIgnoreCase(usertype1)){
+                                        noAccount = false;
+                                        userTypeWrong = false;
+                                        passwordWrong = true;
+                                        break;
+                                    }else if (email1.equalsIgnoreCase(email) && pass1.equalsIgnoreCase(pass)){
+                                        noAccount = false;
+                                        passwordWrong = false;
+                                        userTypeWrong = true;
+                                        break;
                                     }
                                 }
-                                if(!flag)
-                                {
+                                if(noAccount) {
                                     Toast.makeText(LoginActivity.this,"Account does not exist, Create Account first...",Toast.LENGTH_SHORT).show();
+                                }else if (passwordWrong){
+                                    Toast.makeText(LoginActivity.this,"Please Make Sure your password is correct !!",Toast.LENGTH_SHORT).show();
+                                }else if (userTypeWrong){
+                                    Toast.makeText(LoginActivity.this,"Please make sure that you have selected the correct user type !1",Toast.LENGTH_SHORT).show();
                                 }
+
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
@@ -154,8 +173,8 @@ public class LoginActivity extends AppCompatActivity {
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(LoginActivity.this, "login failed...Try Again", Toast.LENGTH_SHORT).show();
-                            System.out.println("++++++++++++++++++++++++++++++++++++" + error);
+                            Toast.makeText(LoginActivity.this, "Login failed...Try Again", Toast.LENGTH_SHORT).show();
+                            //System.out.println("++++++++++++++++++++++++++++++++++++" + error);
                         }
                     });
 
@@ -164,6 +183,19 @@ public class LoginActivity extends AppCompatActivity {
 //                System.out.println(""+email+"\t"+pass+"\t"+userTypes);
             }
         });
+
+        if (!connection){
+            android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(LoginActivity.this);
+            builder.setTitle("Connectivity Problem !!!");
+            builder.setMessage("Please Connect to Internet \nEnsure that you are connected to a network or not !!");
+            builder.setCancelable(false);
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    finish();
+                }
+            }).create().show();
+        }
     }
 
     @Override

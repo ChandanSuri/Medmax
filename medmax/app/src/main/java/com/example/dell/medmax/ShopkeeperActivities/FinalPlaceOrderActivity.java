@@ -346,18 +346,6 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
                 Log.d("ORDER ID =>", orderId[0]);
                 if (orderId[0]!=null) {
                     sendDataToItemsTable();
-                    AlertDialog.Builder builder = new AlertDialog.Builder(FinalPlaceOrderActivity.this);
-                    builder.setTitle("Order Placed !!");
-                    builder.setMessage("Your Order has been placed successfully with an Order Id =>"+orderId[0]);
-                    builder.setMessage("Thank You for Placing an order with us !");
-                    builder.setCancelable(false);
-                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dropSQLTable();
-                            closeAllActivities();
-                        }
-                    }).create().show();
                     //Toast.makeText(FinalPlaceOrderActivity.this, "Order Has Been Placed Successfully !", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(FinalPlaceOrderActivity.this, "Sorry, the Order could be place!!", Toast.LENGTH_SHORT).show();
@@ -404,6 +392,7 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
                             if (Objects.equals(response, "1")){
                                 Log.d("response of Order 2", "Order Placed !");
                                 mPlaceProgress.dismiss();
+                                orderPlacedMessage();
                             }else {
                                 Toast.makeText(FinalPlaceOrderActivity.this, "There was some Error, Check Internet Connectivity!!", Toast.LENGTH_SHORT).show();
                             }
@@ -438,6 +427,22 @@ public class FinalPlaceOrderActivity extends AppCompatActivity {
         c1.close();
     }
 
+    private void orderPlacedMessage(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(FinalPlaceOrderActivity.this);
+        builder.setTitle("Order Placed !!");
+        builder.setMessage("Your Order has been placed successfully with an Order Id =>"+orderId[0]+
+                "\nThank You for Placing an order with us !");
+        builder.setCancelable(false);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dropSQLTable();
+                closeAllActivities();
+            }
+        }).create().show();
+
+    }
     private void dropSQLTable(){
         SQLiteDatabase myDb = DbOpener.openWritableDatabase(this);
         myDb.execSQL(OrderTable.DELETE_ALL);

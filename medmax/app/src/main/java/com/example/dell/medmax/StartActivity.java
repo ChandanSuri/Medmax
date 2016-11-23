@@ -41,17 +41,12 @@ public class StartActivity extends Activity {
             public void run() {
                 try {
                     super.run();
-                    sleep(2000);
+                    sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    if(!flag)
-                    {
-                        finish();
-                        Toast.makeText(StartActivity.this, "Connection Failed, Please Connect ...", Toast.LENGTH_SHORT).show();
 
-                    }
-                    else if(login.equalsIgnoreCase("true"))
+                    if(login.equalsIgnoreCase("true") && flag)
                     {
                         if (userType.equalsIgnoreCase("Vendor")) {
                             Intent intent = new Intent(StartActivity.this, com.example.dell.medmax.FirstActivity.class);
@@ -66,6 +61,7 @@ public class StartActivity extends Activity {
                     else
                     {
                         Intent intent=new Intent(StartActivity.this, com.example.dell.medmax.LoginActivity.class);
+                        intent.putExtra("Connection",flag);
                         startActivity(intent);
                         finish();
                     }

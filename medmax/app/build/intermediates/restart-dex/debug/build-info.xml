@@ -4,31 +4,52 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="1071801963635423" >
+    timestamp="1138083550832444"
+    verifier="R_CLASS_CHANGE" >
 
     <task
         name="javac"
-        duration="1002" />
+        duration="771" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="63" />
+        duration="165" />
     <task
         name="verifier"
-        duration="10" />
+        duration="113" />
 
+    <artifact
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\res\resources-debug.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+    <artifact
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
     <artifact
         location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
         type="DEX" />
 
-    <build timestamp="1071338839556330" >
+    <build timestamp="1134509048741325" >
         <artifact
             location="D:\Android\MedmaxProj\medmax\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="1071801963635423" >
+    <build
+        timestamp="1138083550832444"
+        verifier="R_CLASS_CHANGE" >
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
         <artifact
             location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
             type="DEX" />
