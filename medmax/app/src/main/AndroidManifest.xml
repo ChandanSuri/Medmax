@@ -80,7 +80,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
         </activity>
-        <activity android:name=".ShopkeeperActivities.OrderInfoActivity"></activity>
+        <activity android:name=".ShopkeeperActivities.OrderInfoActivity" />
+        <activity android:name=".AboutApp"></activity>
     </application>
 
 </manifest>

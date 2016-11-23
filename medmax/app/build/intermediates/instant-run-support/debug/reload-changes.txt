@@ -1,13 +1,4 @@
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$style$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$menu$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\android\support\design\R$string$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$mipmap$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$string$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$layout$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainFragment$RecentOrdersListAdapter$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainFragment$RecentOrdersListAdapter$RecentOrdersViewHolder$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainFragment$override.class
 CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$id$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$4$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$integer$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\R$styleable$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$5$override.class
-CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$override.class

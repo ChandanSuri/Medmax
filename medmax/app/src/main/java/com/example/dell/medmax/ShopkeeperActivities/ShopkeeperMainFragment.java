@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -74,7 +75,7 @@ public class ShopkeeperMainFragment extends Fragment {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, RECENT_ORDERS_URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                //Log.d("===============",response);
+                Log.d("===============",response);
                 if (response.equals("[]")) {
                     mProgress.setProgress(100);
                     mProgress.dismiss();
@@ -142,6 +143,7 @@ public class ShopkeeperMainFragment extends Fragment {
         class RecentOrdersViewHolder{
             TextView vendorEmailTv;
             TextView totalCostTv;
+            CheckBox dispatchStatusCb;
         }
 
         private ArrayList<HashMap<String, String>> recentOrdersList;
@@ -175,6 +177,7 @@ public class ShopkeeperMainFragment extends Fragment {
                 recentOrdersViewHolder = new RecentOrdersViewHolder();
                 recentOrdersViewHolder.vendorEmailTv = (TextView)convertView.findViewById(R.id.vendor_email_tv);
                 recentOrdersViewHolder.totalCostTv = (TextView)convertView.findViewById(R.id.total_cost_tv);
+                recentOrdersViewHolder.dispatchStatusCb = (CheckBox)convertView.findViewById(R.id.dispatch_status_cb);
                 convertView.setTag(recentOrdersViewHolder);
             }else {
                 recentOrdersViewHolder = (RecentOrdersViewHolder)convertView.getTag();
@@ -182,6 +185,11 @@ public class ShopkeeperMainFragment extends Fragment {
             HashMap<String, String> thisOrder = getItem(position);
             recentOrdersViewHolder.vendorEmailTv.setText(thisOrder.get(ParseJSONRecentOrdersList.VENDOR_EMAIL_STR));
             recentOrdersViewHolder.totalCostTv.setText(thisOrder.get(ParseJSONRecentOrdersList.TOTAL_COST_STR));
+            if (thisOrder.get(ParseJSONRecentOrdersList.STATUS_STR).equals("1")) {
+                recentOrdersViewHolder.dispatchStatusCb.setChecked(true);
+            }else {
+                recentOrdersViewHolder.dispatchStatusCb.setChecked(false);
+            }
             return convertView;
         }
     }

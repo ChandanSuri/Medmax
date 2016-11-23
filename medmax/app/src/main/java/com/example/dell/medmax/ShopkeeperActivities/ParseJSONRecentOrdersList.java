@@ -18,9 +18,11 @@ public class ParseJSONRecentOrdersList {
     private ArrayList<HashMap<String,String>> list = new ArrayList<>();
     public static final String VENDOR_EMAIL_STR = "Email";
     public static final String TOTAL_COST_STR = "TotalCost";
+    public static final String STATUS_STR = "Dispatch Status";
     public static final String VENDOR_EMAIL = "vendor_email_id";
     public static final String TOTAL_COST = "total_cost";
     public static final String ORDER_ID = "order_id";
+    public static final String STATUS = "status";
     public static final String ORDER_ID_STR = "OrderID";
 
     public ParseJSONRecentOrdersList(String list){
@@ -67,10 +69,12 @@ public class ParseJSONRecentOrdersList {
         String vendorEmail = null;
         String totalCost = null;
         String orderId = null;
+        String status = null;
         try {
             totalCost = jOrder.getString(TOTAL_COST);
             vendorEmail = jOrder.getString(VENDOR_EMAIL);
             orderId = jOrder.getString(ORDER_ID);
+            status = jOrder.getString(STATUS);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -78,6 +82,7 @@ public class ParseJSONRecentOrdersList {
         order.put(VENDOR_EMAIL_STR,vendorEmail);
         order.put(TOTAL_COST_STR,totalCost);
         order.put(ORDER_ID_STR, orderId);
+        order.put(STATUS_STR, status);
 
         return order;
     }

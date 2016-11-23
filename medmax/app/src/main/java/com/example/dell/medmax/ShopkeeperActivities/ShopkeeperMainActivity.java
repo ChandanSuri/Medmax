@@ -22,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.dell.medmax.AboutApp;
 import com.example.dell.medmax.R;
 import com.example.dell.medmax.UserDetail;
 
@@ -117,6 +118,8 @@ public class ShopkeeperMainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_help) {
+            Intent aboutAppIntent = new Intent(ShopkeeperMainActivity.this, AboutApp.class);
+            startActivity(aboutAppIntent);
             return true;
         }else if (id == R.id.action_about_us){
             return true;

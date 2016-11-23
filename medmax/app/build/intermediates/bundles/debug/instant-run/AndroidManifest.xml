@@ -88,6 +88,7 @@
                 android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
         </activity>
         <activity android:name="com.example.dell.medmax.ShopkeeperActivities.OrderInfoActivity" />
+        <activity android:name="com.example.dell.medmax.AboutApp" />
     </application>
 
 </manifest>
