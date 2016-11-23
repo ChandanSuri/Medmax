@@ -23,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.dell.medmax.AboutApp;
+import com.example.dell.medmax.AboutUs;
 import com.example.dell.medmax.R;
 import com.example.dell.medmax.UserDetail;
 
@@ -122,6 +123,8 @@ public class ShopkeeperMainActivity extends AppCompatActivity
             startActivity(aboutAppIntent);
             return true;
         }else if (id == R.id.action_about_us){
+            Intent aboutAppIntent = new Intent(ShopkeeperMainActivity.this, AboutUs.class);
+            startActivity(aboutAppIntent);
             return true;
         }
 

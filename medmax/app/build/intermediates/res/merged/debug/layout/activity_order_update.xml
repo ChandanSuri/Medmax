@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/custom_theme_color"
+    tools:context="com.example.dell.medmax.ShopkeeperActivities.OrderInfoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_bar">
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/order_details_layout_vendor"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Order Details"
+            android:textColor="#04c1ec"
+            android:id="@+id/textView7"
+            android:textSize="40sp"
+            android:fontFamily="cursive"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Order Id => "
+                android:id="@+id/textView8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:fontFamily="sans-serif-smallcaps"
+                android:id="@+id/order_id_tv_vendor" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="About Shopkeeper"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-smallcaps"
+            android:id="@+id/textView9" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4"
+            android:id="@+id/linearLayout">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Shopkeeper Name "
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="15sp"
+                    android:id="@+id/shopkeeper_name_info"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Shopkeeper Email ID "
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="15sp"
+                    android:id="@+id/shopkeeper_email_info"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Shopkeeper Address "
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="15sp"
+                    android:id="@+id/shopkeeper_address_info"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="1"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="Shopkeeper Contact "
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="20sp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="15sp"
+                    android:id="@+id/shopkeeper_contact_info"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Total Cost to be Recieved "
+                android:fontFamily="sans-serif-smallcaps"
+                android:textStyle="bold"
+                android:layout_weight="0.5"
+                android:id="@+id/textView10" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:gravity="center_horizontal"
+                android:layout_weight="0.5"
+                android:id="@+id/total_cost_tv_vendor" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Items Ordered"
+            android:id="@+id/textView11"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_gravity="center_horizontal" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/ordered_items_list_view_vendor"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dispatch_button_layer"
+            android:clickable="true"
+            android:layout_below="@id/order_details_layout_vendor"
+            >
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dispatch Order"
+                android:visibility="invisible"
+                android:background="#20B2AA"
+                android:id="@+id/dispatch_button"
+                android:textColor="#fff"
+                android:layout_centerHorizontal="true"
+                android:fadingEdge="horizontal"
+                android:enabled="true"
+                android:layout_marginBottom="0dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

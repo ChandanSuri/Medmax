@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Additem"
-            android:label="@string/title_activity_additem"
+            android:name=".VendorActivities.Additem"
+            android:label="AddItem"
             android:theme="@style/CustomTheme" />
         <activity
             android:name=".StartActivity"
@@ -42,12 +42,12 @@
             android:label="@string/title_activity_additem"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".FirstActivity"
-            android:label="@string/title_activity_additem"
+            android:name=".VendorActivities.VendorMainActivity"
+            android:label="VendorMainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Editdelete"
-            android:label="@string/title_activity_editdelete"
+            android:name=".VendorActivities.Editdelete"
+            android:label="Edit Delete"
             android:theme="@style/CustomTheme" />
         <activity
             android:name=".ShopkeeperActivities.ShopkeeperMainActivity"
@@ -81,7 +81,9 @@
                 android:value="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity" />
         </activity>
         <activity android:name=".ShopkeeperActivities.OrderInfoActivity" />
-        <activity android:name=".AboutApp"></activity>
+        <activity android:name=".AboutApp" />
+        <activity android:name=".VendorActivities.OrderUpdateActivity" />
+        <activity android:name=".AboutUs"></activity>
     </application>
 
 </manifest>

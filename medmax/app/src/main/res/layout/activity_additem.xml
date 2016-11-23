@@ -32,8 +32,10 @@
         android:hint="Item Price"
         android:id="@+id/itemPrice"
         android:textAlignment="center"
+        android:inputType="number"
         android:layout_marginTop="80pt"/>
     <Button
+        android:padding="10dp"
         android:typeface="serif"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -41,5 +43,7 @@
         android:layout_below="@+id/itemPrice"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20pt"
+        android:background="#20B2AA"
+        android:textColor="#fff"
         android:text="Add"/>
 </RelativeLayout>

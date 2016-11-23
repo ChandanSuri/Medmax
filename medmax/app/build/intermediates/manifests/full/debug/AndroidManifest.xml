@@ -18,8 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.dell.medmax.Additem"
-            android:label="@string/title_activity_additem"
+            android:name="com.example.dell.medmax.VendorActivities.Additem"
+            android:label="AddItem"
             android:theme="@style/CustomTheme" />
         <activity
             android:name="com.example.dell.medmax.StartActivity"
@@ -48,12 +48,12 @@
             android:label="@string/title_activity_additem"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.example.dell.medmax.FirstActivity"
-            android:label="@string/title_activity_additem"
+            android:name="com.example.dell.medmax.VendorActivities.VendorMainActivity"
+            android:label="VendorMainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.example.dell.medmax.Editdelete"
-            android:label="@string/title_activity_editdelete"
+            android:name="com.example.dell.medmax.VendorActivities.Editdelete"
+            android:label="Edit Delete"
             android:theme="@style/CustomTheme" />
         <activity
             android:name="com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity"
@@ -88,6 +88,8 @@
         </activity>
         <activity android:name="com.example.dell.medmax.ShopkeeperActivities.OrderInfoActivity" />
         <activity android:name="com.example.dell.medmax.AboutApp" />
+        <activity android:name="com.example.dell.medmax.VendorActivities.OrderUpdateActivity" />
+        <activity android:name="com.example.dell.medmax.AboutUs" />
     </application>
 
 </manifest>

@@ -93,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
                 {
                     Toast.makeText(RegisterActivity.this, "Enter Name", Toast.LENGTH_SHORT).show();
                 }
-                else if(email.isEmpty())
+                else if(email.isEmpty() || !email.contains("@") || !email.contains("."))
                 {
                     Toast.makeText(RegisterActivity.this, "Enter Email Id", Toast.LENGTH_SHORT).show();
                 }

@@ -23,6 +23,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity;
+import com.example.dell.medmax.VendorActivities.VendorMainActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -133,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                                         userTypeWrong = false;
 //                                        getFragmentManager().beginTransaction().replace(R.id.frame,new Ride_Available()).commit();
                                         if(usertype1.equalsIgnoreCase("vendor")) {
-                                            Intent intent = new Intent(LoginActivity.this, FirstActivity.class);        //problem
+                                            Intent intent = new Intent(LoginActivity.this, VendorMainActivity.class);        //problem
                                             startActivity(intent);
                                             finish();
                                             break;

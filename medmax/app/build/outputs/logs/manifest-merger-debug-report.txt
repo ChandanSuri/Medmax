@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:2:1-87:12
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:2:1-89:12
 	package
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml
@@ -22,7 +22,7 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:6:5-79
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:6:22-76
 application
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:8:5-85:19
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:8:5-87:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Android\MedmaxProj\medmax\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] D:\Android\MedmaxProj\medmax\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] D:\Android\MedmaxProj\medmax\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
@@ -52,14 +52,14 @@ MERGED from [com.android.support:support-v4:23.4.0] D:\Android\MedmaxProj\medmax
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:10:9-43
 	android:theme
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:13:9-40
-activity#com.example.dell.medmax.Additem
+activity#com.example.dell.medmax.VendorActivities.Additem
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:14:9-17:50
 	android:label
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:16:13-59
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:16:13-36
 	android:theme
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:15:13-36
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:15:13-53
 activity#com.example.dell.medmax.StartActivity
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:18:9-27:20
 	android:label
@@ -110,22 +110,22 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:40:9-43
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:43:13-44
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:41:13-45
-activity#com.example.dell.medmax.FirstActivity
+activity#com.example.dell.medmax.VendorActivities.VendorMainActivity
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:44:9-47:47
 	android:label
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:46:13-59
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:46:13-47
 	android:theme
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:47:13-44
 	android:name
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:45:13-42
-activity#com.example.dell.medmax.Editdelete
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:45:13-64
+activity#com.example.dell.medmax.VendorActivities.Editdelete
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:48:9-51:50
 	android:label
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:50:13-62
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:50:13-40
 	android:theme
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:51:13-47
 	android:name
-		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:49:13-39
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:49:13-56
 activity#com.example.dell.medmax.ShopkeeperActivities.ShopkeeperMainActivity
 ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:52:9-55:47
 	android:label
@@ -175,9 +175,17 @@ ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:83:9-76
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:83:19-73
 activity#com.example.dell.medmax.AboutApp
-ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:84:9-55
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:84:9-46
 	android:name
 		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:84:19-43
+activity#com.example.dell.medmax.VendorActivities.OrderUpdateActivity
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:85:9-74
+	android:name
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:85:19-71
+activity#com.example.dell.medmax.AboutUs
+ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:86:9-54
+	android:name
+		ADDED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml:86:19-42
 uses-sdk
 INJECTED from D:\Android\MedmaxProj\medmax\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.4.0] D:\Android\MedmaxProj\medmax\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78

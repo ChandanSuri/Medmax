@@ -49,7 +49,7 @@ public class StartActivity extends Activity {
                     if(login.equalsIgnoreCase("true") && flag)
                     {
                         if (userType.equalsIgnoreCase("Vendor")) {
-                            Intent intent = new Intent(StartActivity.this, com.example.dell.medmax.FirstActivity.class);
+                            Intent intent = new Intent(StartActivity.this, com.example.dell.medmax.VendorActivities.VendorMainActivity.class);
                             startActivity(intent);
                             finish();
                         }else if(userType.equalsIgnoreCase("Shopkeeper")){

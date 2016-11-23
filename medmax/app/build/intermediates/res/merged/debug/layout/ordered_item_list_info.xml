@@ -81,7 +81,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
             android:id="@+id/status_of_product"
-            android:clickable="false"/>
+            android:clickable="false"
+            android:focusable="false"/>
 
 
     </LinearLayout>

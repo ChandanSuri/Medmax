@@ -9,56 +9,56 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/header"
         android:id="@+id/detail">
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="1"
-        android:padding="15dp">
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:text="NAME"
-            android:textSize="30dp"/>
-        <EditText
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/user_name"/>
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:text="EMAIL ID"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"/>
-        <EditText
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/user_mail"/>
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:text="CONTACT NUMBER"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"/>
-        <EditText
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/user_number"
-            android:inputType="phone"/>
-        <TextView
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:text="ADDRESS"
-            android:textSize="30dp"
-            android:layout_marginTop="10dp"/>
-        <EditText
-            android:textColor="@android:color/holo_blue_dark"
-            android:fontFamily="serif-monospace"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/user_address"/>
-    </GridLayout>
+        <GridLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="1"
+            android:padding="15dp">
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:text="NAME"
+                android:textSize="30dp"/>
+            <EditText
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/user_name"/>
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:text="EMAIL ID"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/user_mail"/>
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:text="CONTACT NUMBER"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/user_number"
+                android:inputType="phone"/>
+            <TextView
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:text="ADDRESS"
+                android:textSize="30dp"
+                android:layout_marginTop="10dp"/>
+            <EditText
+                android:textColor="@android:color/holo_blue_dark"
+                android:fontFamily="serif-monospace"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/user_address"/>
+        </GridLayout>
     </ScrollView>
     <Button
         android:textColor="@android:color/holo_blue_dark"

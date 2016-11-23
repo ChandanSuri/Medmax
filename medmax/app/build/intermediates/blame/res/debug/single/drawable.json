@@ -32,16 +32,20 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bm.jpg",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\bm.jpg"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_share.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\ic_menu_share.xml"
     },
     {
-        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shopkeeper_order.png",
-        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\shopkeeper_order.png"
-    },
-    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_back.jpg",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\nav_back.jpg"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shopkeeper_order.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\shopkeeper_order.png"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
@@ -64,16 +68,28 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
-        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
-    },
-    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dk.jpg",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\dk.jpg"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\cs.jpg",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\cs.jpg"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_back2.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\nav_back2.png"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_gallery.xml",
@@ -102,6 +118,10 @@
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\da.jpg",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\da.jpg"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
@@ -168,12 +188,12 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
-        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\document.png",
-        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\document.png"
-    },
-    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\recent_back.png",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\recent_back.png"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\document.png",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\drawable\\document.png"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",

@@ -5,28 +5,66 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <TextView
         style="@style/CodeFont"
+        android:fontFamily="sans-serif-smallcaps"
         android:typeface="serif"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/comp"
+        android:text="Company : "
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20pt"
+        android:textSize="20dp"/>
+    <TextView
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Company Name"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_toRightOf="@+id/comp"
         android:id="@+id/companyName1"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000"
         android:textSize="20dp"
         android:textAlignment="center"
         android:layout_marginTop="20pt"/>
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50pt"
+        android:fontFamily="sans-serif-smallcaps"
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:text="Item Name :"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/name"
+        />
+    <TextView
         style="@style/CodeFont"
         android:typeface="serif"
         android:layout_width="match_parent"
+        android:fontFamily="sans-serif-smallcaps"
         android:layout_height="wrap_content"
         android:hint="Item Name"
-        android:background="@color/colorPrimary"
-        android:textColor="#fff"
+        android:textColor="#000"
         android:id="@+id/itemName1"
         android:textSize="20dp"
+        android:layout_toRightOf="@+id/name"
         android:textAlignment="center"
         android:layout_marginTop="50pt"/>
+    <TextView
+        style="@style/CodeFont"
+        android:typeface="serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80pt"
+        android:id="@+id/update_price"
+        android:text="Updated price :"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,27 +72,40 @@
         android:textSize="20dp"
         android:id="@+id/itemPrice1"
         android:textAlignment="center"
+        android:inputType="number"
+        android:layout_toRightOf="@+id/update_price"
         android:layout_marginTop="80pt"/>
-
-    <Button
-        android:typeface="serif"
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:text="Update"
-        android:id="@+id/updateInventory"
-        android:layout_alignTop="@+id/delete"
-        android:layout_toStartOf="@+id/delete"
-        android:layout_marginEnd="60dp" />
-
-    <Button
-        android:typeface="serif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Delete"
-        android:id="@+id/delete"
-        android:layout_marginEnd="80dp"
         android:layout_below="@+id/itemPrice1"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="30dp"
+        android:rowCount="1"
+        android:columnCount="2">
+        <Button
+            android:typeface="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:textAllCaps="true"
+            android:padding="20dp"
+            android:id="@+id/updateInventory"
+            android:background="#20B2AA"
+            android:textColor="#fff"/>
 
+        <Button
+            android:typeface="serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:textAllCaps="true"
+            android:padding="20dp"
+            android:id="@+id/delete"
+            android:layout_marginLeft="15dp"
+            android:background="#20B2AA"
+            android:textColor="#fff"/>
+
+    </GridLayout>
 </RelativeLayout>

@@ -5,41 +5,39 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    tools:context=".MainFragment">
+    tools:context=".VendorActivities.UpdateInventory"
+    android:id="@+id/inventory_layout">
 
-    <LinearLayout android:id="@+id/footer"
-        android:layout_width="fill_parent"
-        android:layout_height="80dip"
-        android:background="@layout/footer_repeat"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-    </LinearLayout>
     <TextView
         style="@style/CodeFont"
+        android:textColor="#04c1ec"
         android:typeface="serif"
+        android:fontFamily="cursive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inventory"
+        android:textSize="40sp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/inventory"
-        android:textSize="30sp"
         android:layout_below="@+id/header"
         android:layout_centerHorizontal="true" />
     <ListView
         android:typeface="monospace"
         android:layout_width="match_parent"
-        android:layout_height="200pt"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:id="@+id/itemList"
-        android:layout_below="@+id/inventory"
-        android:divider="#4D4E4E"
-        android:dividerHeight="1dp">
+        android:layout_below="@+id/inventory">
     </ListView>
-    <Button
-        android:typeface="serif"
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add"
         android:id="@+id/add"
-        android:layout_below="@+id/itemList"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginRight="20dp"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#20B2AA"
+        android:textColor="#fff"/>
 </RelativeLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.dell.medmax.AboutUs"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Developers"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/cs"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Chandan Suri"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/textView12"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginStart="41dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="csuri2129621296@gmail.com"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/textView13"
+        android:layout_below="@+id/textView12"
+        android:layout_alignStart="@+id/textView12" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/imageView"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/da"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Deepak Aggarwal"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:id="@+id/textView14"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignStart="@+id/textView13" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="aggarwaldeepak196@gmail.com"
+        android:id="@+id/textView15"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/imageView2"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/dk"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Deepak Katta"
+        android:id="@+id/textView16"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_alignStart="@+id/textView15" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="kattadeepak96@gmail.com"
+        android:id="@+id/textView17"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView16"
+        android:layout_alignStart="@+id/textView16" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:src="@drawable/bm"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Bhaskar Majithia"
+        android:id="@+id/textView18"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignStart="@+id/textView17" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="bkmajithia30@gmail.com"
+        android:id="@+id/textView19"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/textView18"
+        android:layout_alignStart="@+id/textView18" />
+
+</RelativeLayout>

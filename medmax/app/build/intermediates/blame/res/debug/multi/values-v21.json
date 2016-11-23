@@ -1603,7 +1603,7 @@
                     "startOffset": 16137,
                     "endLine": 221,
                     "endColumn": 12,
-                    "endOffset": 16452
+                    "endOffset": 16449
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\values-v21\\CodeFont.xml",
@@ -1613,7 +1613,7 @@
                         "startOffset": 57,
                         "endLine": 7,
                         "endColumn": 12,
-                        "endOffset": 377
+                        "endOffset": 374
                     }
                 }
             },
@@ -1621,10 +1621,10 @@
                 "to": {
                     "startLine": 222,
                     "startColumn": 4,
-                    "startOffset": 16457,
+                    "startOffset": 16454,
                     "endLine": 231,
                     "endColumn": 12,
-                    "endOffset": 16965
+                    "endOffset": 16962
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v21\\values-v21.xml",
@@ -1642,10 +1642,10 @@
                 "to": {
                     "startLine": 232,
                     "startColumn": 4,
-                    "startOffset": 16970,
+                    "startOffset": 16967,
                     "endLine": 241,
                     "endColumn": 12,
-                    "endOffset": 17490
+                    "endOffset": 17487
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v21\\values-v21.xml",
@@ -1663,10 +1663,10 @@
                 "to": {
                     "startLine": 242,
                     "startColumn": 4,
-                    "startOffset": 17495,
+                    "startOffset": 17492,
                     "endLine": 251,
                     "endColumn": 12,
-                    "endOffset": 18170
+                    "endOffset": 18167
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v21\\values-v21.xml",
@@ -1684,9 +1684,9 @@
                 "to": {
                     "startLine": 252,
                     "startColumn": 4,
-                    "startOffset": 18175,
+                    "startOffset": 18172,
                     "endColumn": 56,
-                    "endOffset": 18227
+                    "endOffset": 18224
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v21\\values-v21.xml",
@@ -1703,9 +1703,9 @@
                 "to": {
                     "startLine": 253,
                     "startColumn": 4,
-                    "startOffset": 18232,
+                    "startOffset": 18229,
                     "endColumn": 57,
-                    "endOffset": 18285
+                    "endOffset": 18282
                 },
                 "from": {
                     "file": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v21\\values-v21.xml",

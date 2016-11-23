@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Shopkeeper Email"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/shopkeeper_email_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/shopkeeper_email" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Total Cost"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/total_cost_text_vendor" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/total_cost_vendor" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Status"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/status_order_vendor_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:gravity="center"
+            android:fontFamily="monospace"
+            android:id="@+id/status_order_vendor" />
+    </LinearLayout>
+</LinearLayout>

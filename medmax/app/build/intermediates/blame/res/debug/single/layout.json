@@ -112,6 +112,10 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\fragment_shopkeeper_place_order1.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_order_update.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\activity_order_update.xml"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\place_order_2_inventory_item.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\place_order_2_inventory_item.xml"
     },
@@ -136,6 +140,10 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\item.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about_us.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\activity_about_us.xml"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\app_bar_main.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\app_bar_main.xml"
     },
@@ -156,12 +164,12 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar.xml"
     },
     {
-        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\start.xml",
-        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\start.xml"
-    },
-    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\start.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\start.xml"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_base.xml",
@@ -218,6 +226,10 @@
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\recent_order_list_vendor.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\recent_order_list_vendor.xml"
     },
     {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
@@ -312,6 +324,10 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_vendor_main.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\fragment_vendor_main.xml"
+    },
+    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
@@ -348,11 +364,11 @@
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\src\\main\\res\\layout\\content.xml"
     },
     {
-        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
-        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
-    },
-    {
         "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
         "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "D:\\Android\\MedmaxProj\\medmax\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\select_dialog_item_material.xml"
     }
 ]
