@@ -61,7 +61,7 @@ public class Editdelete extends Activity {
 
                         } else if (response.contains("Insertion Failed. Some Fields are Blank....!!")) {
 
-                            Toast.makeText(Editdelete.this, "item price can't be empty", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Editdelete.this, "Ttem price can't be empty, please update", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },

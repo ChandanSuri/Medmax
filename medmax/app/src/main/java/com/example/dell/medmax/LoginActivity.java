@@ -189,11 +189,11 @@ public class LoginActivity extends AppCompatActivity {
             android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(LoginActivity.this);
             builder.setTitle("Connectivity Problem !!!");
             builder.setMessage("Please Connect to Internet \nEnsure that you are connected to a network or not !!");
-            builder.setCancelable(false);
+            builder.setCancelable(true);
             builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    finish();
+                    dialog.cancel();
                 }
             }).create().show();
         }

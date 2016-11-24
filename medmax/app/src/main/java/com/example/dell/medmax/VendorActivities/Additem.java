@@ -48,43 +48,48 @@ public class Additem extends Activity {
         additem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String c_name=companyName.getText().toString();
-                final String i_name=itemName.getText().toString();
-                final String i_price=itemPrice.getText().toString();
-                StringRequest stringRequest=new StringRequest(Request.Method.POST, URL1, new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String s) {
-                        if(s.contains("Data Inserted successfully...!!"))
-                        {
-                            Toast.makeText(Additem.this,"Item added to list" , Toast.LENGTH_LONG).show();
-                        }
-                        else if (s.contains("Insertion Failed. Some Fields are Blank....!!")){
-                            Toast.makeText(Additem.this,"Some fields were empty" , Toast.LENGTH_LONG).show();
-                        }
-                    }
-                },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(Additem.this, "connection error", Toast.LENGTH_LONG).show();
+                final String c_name = companyName.getText().toString();
+                final String i_name = itemName.getText().toString();
+                final String i_price = itemPrice.getText().toString();
+                if (!c_name.equals("") && !i_name.equals("") && !i_price.equals("")) {
+                    StringRequest stringRequest = new StringRequest(Request.Method.POST, URL1, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String s) {
+                            if (s.contains("Data Inserted successfully...!!")) {
+                                Toast.makeText(Additem.this, "Item added to list", Toast.LENGTH_LONG).show();
+                            } else if (s.contains("Insertion Failed. Some Fields are Blank....!!")) {
+                                Toast.makeText(Additem.this, "Some fields were empty", Toast.LENGTH_LONG).show();
                             }
-                        }) {
-                    @Override
-                    protected Map<String, String> getParams()
-                    {
-                        Map<String, String> params = new HashMap<String, String>();
-                        params.put("vendorsEmail", usermail);
-                        params.put("companyName", c_name);
-                        params.put("itemName", i_name);
-                        params.put("itemPrice", i_price);
-                        return params;
-                    }
-                };
-                requestQueue.add(stringRequest);
-                Intent intent=new Intent(Additem.this,VendorMainActivity.class);
-                startActivity(intent);
-                finish();
-                finish();
+                        }
+                    },
+                            new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    Toast.makeText(Additem.this, "connection error", Toast.LENGTH_LONG).show();
+                                }
+                            }) {
+                        @Override
+                        protected Map<String, String> getParams() {
+                            Map<String, String> params = new HashMap<String, String>();
+                            params.put("vendorsEmail", usermail);
+                            params.put("companyName", c_name);
+                            params.put("itemName", i_name);
+                            params.put("itemPrice", i_price);
+                            return params;
+                        }
+                    };
+                    requestQueue.add(stringRequest);
+                    Intent intent = new Intent(Additem.this, VendorMainActivity.class);
+                    startActivity(intent);
+                    finish();
+                    finish();
+                }else if (c_name.equals("")){
+                    Toast.makeText(Additem.this, "Please Enter valid Company Name !!", Toast.LENGTH_SHORT).show();
+                }else if (i_name.equals("")){
+                    Toast.makeText(Additem.this, "Please Enter valid Item Name !!", Toast.LENGTH_SHORT).show();
+                }else if (i_price.equals("")){
+                    Toast.makeText(Additem.this, "Please Enter valid Item Price, Nothing Entered !!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

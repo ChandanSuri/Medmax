@@ -24,6 +24,7 @@ import android.widget.Toast;
 
 import com.example.dell.medmax.AboutApp;
 import com.example.dell.medmax.AboutUs;
+import com.example.dell.medmax.LoginActivity;
 import com.example.dell.medmax.R;
 import com.example.dell.medmax.UserDetail;
 

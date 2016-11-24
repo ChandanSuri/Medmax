@@ -22,7 +22,9 @@ import android.widget.TextView;
 
 import com.example.dell.medmax.AboutApp;
 import com.example.dell.medmax.AboutUs;
+import com.example.dell.medmax.LoginActivity;
 import com.example.dell.medmax.R;
+import com.example.dell.medmax.StartActivity;
 import com.example.dell.medmax.UserDetail;
 
 import java.util.ArrayList;
@@ -153,18 +155,21 @@ public class VendorMainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage("Are you sure you want to Exit ?");
+        builder.setTitle("Leave the Application ?");
+        builder.setMessage("Are you sure you want to Exit !!");
         builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 //                super.onBackPressed();
+                //Intent backIntent = new Intent(VendorMainActivity.this, StartActivity.class);
+                //startActivity(backIntent);
                 finish();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                dialog.dismiss();
+                dialog.cancel();
             }
         });
         AlertDialog dialog = builder.create();

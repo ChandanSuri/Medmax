@@ -4,29 +4,45 @@
     api-level="23"
     density="xxhdpi"
     format="7"
-    timestamp="1183360720700622" >
+    timestamp="1214731149024726" >
 
     <task
         name="javac"
-        duration="961" />
+        duration="1353" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1884" />
+        duration="197" />
     <task
         name="verifier"
-        duration="457" />
+        duration="124" />
 
     <artifact
-        location="D:\Android\MedmaxProj\medmax\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+        type="DEX" />
+    <artifact
+        location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
 
-    <build timestamp="1183360720700622" >
+    <build timestamp="1213544142666180" >
         <artifact
             location="D:\Android\MedmaxProj\medmax\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build timestamp="1214409730776668" >
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_9\classes.dex"
+            type="DEX" />
+    </build>
+    <build timestamp="1214731149024726" >
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
+            type="DEX" />
+        <artifact
+            location="D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

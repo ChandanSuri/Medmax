@@ -1,0 +1,8 @@
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$3$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$4$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\LoginActivity$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$5$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\ShopkeeperActivities\ShopkeeperMainActivity$2$override.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,D:\Android\MedmaxProj\medmax\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\example\dell\medmax\LoginActivity$4$override.class
